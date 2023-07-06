@@ -22,7 +22,7 @@ jobs:
         env:
           REACT_APP_TRANSLATOR_ENDPOINT: ${{ secrets.REACT_APP_TRANSLATOR_ENDPOINT }}
           REACT_APP_TRANSLATOR_KEY: ${{ secrets.REACT_APP_TRANSLATOR_KEY }}
-        script: |
+        run: |
           echo "REACT_APP_TRANSLATOR_ENDPOINT=$REACT_APP_TRANSLATOR_ENDPOINT" | sudo tee .env
           echo "REACT_APP_TRANSLATOR_KEY=$REACT_APP_TRANSLATOR_KEY" | sudo tee .env
       - name: Build And Deploy
