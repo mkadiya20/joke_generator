@@ -32,7 +32,7 @@ function App() {
   // get a joke from the API
   const getJoke = () => {
     // URL is generated based on selected categories and blacklist items
-    const response = fetch(getRequest(), {
+    fetch(getRequest(), {
       headers: {
         'Accept': 'application/json'
       }
@@ -49,7 +49,7 @@ function App() {
 
   // translate the joke
   const translateJoke = (fromCode: string, toCode: string, jokeText: string) => {
-    const response = fetch(`${process.env.REACT_APP_TRANSLATOR_ENDPOINT}/translate?api-version=3.0&from=${fromCode}&to=${toCode}`, {
+    fetch(`${process.env.REACT_APP_TRANSLATOR_ENDPOINT}/translate?api-version=3.0&from=${fromCode}&to=${toCode}`, {
       method: "POST",
       body: JSON.stringify([{
         text: jokeText
@@ -94,6 +94,7 @@ function App() {
     if (language.code !== joke.languageCode) {
       translateJoke(joke.languageCode, language.code, joke.text);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language, joke]);
 
   return (

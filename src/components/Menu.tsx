@@ -28,7 +28,7 @@ const Menu = (props: MenuProps) => {
 
     // get the languages from the API
     useEffect(() => {
-    const response = fetch(process.env.REACT_APP_TRANSLATOR_ENDPOINT + "/Languages?api-version=3.0&scope=translation", {
+    fetch(process.env.REACT_APP_TRANSLATOR_ENDPOINT + "/Languages?api-version=3.0&scope=translation", {
         headers: {
         'Ocp-Apim-Subscription-Key': process.env.REACT_APP_TRANSLATOR_KEY as string
         }})

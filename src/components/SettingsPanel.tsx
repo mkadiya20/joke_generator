@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
 import { IoCheckmarkCircleOutline } from 'react-icons/io5';
 
 import { TagProps, SettingsPanelProps } from '../interface/interface';
