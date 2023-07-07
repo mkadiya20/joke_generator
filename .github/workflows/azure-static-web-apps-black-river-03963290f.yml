@@ -33,7 +33,7 @@ jobs:
         env: # Here we add the environment variables
           REACT_APP_TRANSLATOR_ENDPOINT: ${{ secrets.REACT_APP_TRANSLATOR_ENDPOINT }}
           REACT_APP_TRANSLATOR_KEY: ${{ secrets.REACT_APP_TRANSLATOR_KEY }}
-          REACT_APP_JOKE_API: ${{ secrets.REACT_APP_JOKE_API }
+          REACT_APP_JOKE_API: ${{ secrets.REACT_APP_JOKE_API }}
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
