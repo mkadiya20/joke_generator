@@ -73,7 +73,7 @@ function App() {
     const selectedBlacklist = blacklist.filter((item) => item.selected).map((item) => item.name);
 
     // build request url
-    let requestUrl = 'https://v2.jokeapi.dev/joke/';
+    let requestUrl = process.env.REACT_APP_JOKE_API + '/';
     if (selectedCategories.length > 0) {
       requestUrl += `${selectedCategories.join(',')}`;
     } else {
